@@ -1,0 +1,285 @@
+$main_background: #f7f7f7;
+$std_green: #00686c;
+$light_green: #6ffd65;
+$progress_green: #0a8d92;
+$the_black: #292929;
+
+$footer_background: $the_black;
+$footer_header_color: #434343;
+$footer_text_color: white;
+
+$radius-rounded: 1.5rem;
+
+$sword_color: #cdfe2e;
+$logo_color: #00686c;
+
+$size-1: 1.5rem;
+
+@import '../../node_modules/bulma/bulma.sass';
+// Disable the fullhd breakpoint
+$fullhd-enabled: false;
+
+svg {
+  .logo-brand,
+  .logo-shield {
+    fill: $logo_color;
+  }
+  .logo-sword {
+    fill: $sword_color;
+    stroke: $sword_color;
+  }
+}
+
+.std-green {
+  color: $std_green;
+}
+html {
+  background-color: $main_background !important;
+}
+
+body {
+  background-color: $main_background !important;
+}
+.container {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.custom-container {
+  max-width: 900px !important;
+}
+
+p {
+  line-height: 1.75;
+}
+
+.header-text {
+  line-height: 1.15 !important;
+}
+
+.subtext {
+  font-size: 16px;
+}
+
+//button styling
+.button {
+  background-color: $sword_color !important;
+  color: $std_green !important;
+  border: 1px solid $sword_color !important;
+  font-weight: 600 !important;
+}
+
+.button:hover {
+  background-color: #ffffff !important;
+  color: $std_green !important;
+  border: 1px solid $std_green !important;
+}
+
+.button-reverse {
+  background-color: #ffffff !important;
+  color: $std_green !important;
+  border: 1px solid $std_green !important;
+}
+.button-reverse:hover {
+  background-color: $sword_color !important;
+  color: $std_green !important;
+  border: 1px solid $sword_color !important;
+  font-weight: 600 !important;
+}
+
+.button-arrow {
+  border-radius: 2rem;
+  .fa-rotate-45 {
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}
+
+//header
+header {
+  .navbar {
+    background-color: $main_background !important;
+    a.navbar-item:hover {
+      color: $std_green !important;
+    }
+    .fa-globe {
+      font-size: x-large;
+    }
+
+    a#burger:hover {
+      background: transparent;
+      color: $std_green;
+    }
+    .mobileicon {
+      display: none;
+    }
+  }
+}
+
+.erwecke {
+  background-color: $std_green;
+  .count {
+    .subtext {
+      color: $sword_color;
+    }
+  }
+  .progress.is-progress::-webkit-progress-value {
+    background-color: rgba($color: white, $alpha: 1);
+  }
+  .progress.is-progress::-moz-progress-bar {
+    background-color: rgba($color: $white, $alpha: 1);
+  }
+  ::-webkit-progress-bar {
+    background-color: $progress_green;
+  }
+  .progress.is-progress::-ms-fill {
+    background-color: rgba($color: $white, $alpha: 1);
+  }
+  .progress.is-progress:indeterminate {
+    background-image: linear-gradient(
+      to right,
+      rgba($color: green, $alpha: 1) 30%,
+      $std_green 30%
+    );
+  }
+  .nicolas {
+    .subtext:nth-child(2) {
+      opacity: 0.3;
+      line-height: 25px;
+    }
+    .fab {
+      border: 1px solid white;
+      padding: 10px 25px 10px 14px;
+      border-radius: 3rem;
+      font-size: 1.2rem;
+      width: 43px;
+      height: 42px;
+    }
+  }
+  a.button {
+    width: 100% !important;
+  }
+}
+
+.sq-columns {
+  .container-fluid {
+    background-color: $std_green;
+    color: $sword_color;
+    font-weight: 600;
+    .columns {
+      text-align: center;
+      .column {
+        border-color: $sword_color;
+        border-style: solid;
+        border-width: 1px;
+        height: 40vh;
+        padding: 4%;
+        p:not(.skip) {
+          margin: 3rem auto !important;
+        }
+      }
+    }
+  }
+}
+
+.community {
+  .custom-mb {
+    margin-bottom: 1.75rem;
+  }
+}
+
+.blog {
+  .slide.slick-slide {
+    width: 300px !important;
+    p {
+      font-weight: 600;
+    }
+  }
+}
+
+.header-img {
+  img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mobile-hide {
+    display: none;
+  }
+  header {
+    .navbar {
+      #burger {
+        margin-right: -90px;
+        span {
+          height: 2px;
+          width: 22px;
+        }
+      }
+      a.navbar-item {
+        font-size: 1.5rem;
+        font-weight: 500;
+      }
+      .mobileicon {
+        display: inline-block !important;
+        background-color: transparent;
+        margin-right: 25px;
+        margin-top: 15px;
+      }
+    }
+  }
+
+  .erwecke {
+    .column {
+      text-align: center !important;
+    }
+  }
+
+  .sq-columns {
+    h2 {
+      text-align: left !important;
+    }
+    .container-fluid {
+      .columns {
+        padding: 0 5%;
+        .column {
+          border-width: 0 0 1px 0;
+          height: 20vh;
+          padding: 5% 0 10% 0;
+          p {
+            margin: 0 !important;
+          }
+        }
+      }
+    }
+  }
+
+  .community {
+    .custom-mb {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media screen and (min-width: 700px) {
+  #head-claim {
+    overflow: hidden;
+    background: {
+      image: url(/images/the-sword.svg);
+      repeat: no-repeat;
+      position: bottom -2rem right 10rem;
+      size: contain;
+    }
+
+    margin-bottom: 0;
+
+    h1 {
+      font-size: 52px !important;
+    }
+  }
+}
+
+@import 'slick';
+@import 'kontakt';
+@import 'footer';

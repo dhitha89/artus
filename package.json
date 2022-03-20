@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3"
+  },
+  "devDependencies": {
+    "bulma": "^0.9.2",
+    "clean-css": "^5.1.2",
+    "dart-sass": "^1.25.0",
+    "eleventy-plugin-svg-contents": "^0.7.0",
+    "fs-extra": "^10.0.0"
+  }
+}
